@@ -1,0 +1,13 @@
+{
+    "name": "EROAD - Weekly Report Helper",
+    "description": "Adds a print button to EROAD, allowing you to print a week's worth of detailed activity reports for a selected asset.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://depot.eroad.co.nz/Portal/tracking/*"],
+            "css": ["printableReport.css"],
+            "js": ["reportGen.js"]
+        }
+    ]
+  }

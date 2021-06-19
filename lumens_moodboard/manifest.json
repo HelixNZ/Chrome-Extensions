@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Lumens Moodboard",
+    "author": "Jake Field",
+    "description": "Creates a moodboard using images from products in a Lumens catalog",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": ["https://www.lumens.com/*"],
+            "css": ["moodboard.css"],
+            "js": ["moodboard.js"]
+        }
+    ]
+  }

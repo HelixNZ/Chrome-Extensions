@@ -1,0 +1,67 @@
+.customPrintableReport
+{
+    visibility: hidden;
+}
+
+.reportGenPopup
+{
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483647;
+    position: fixed;
+    opacity: 0.9;
+    background: #333333;
+}
+
+.reportGenPopup_window
+{
+    position: relative;
+    width:350px;
+    height:200px;
+    left:50%;
+    top:50%;
+    margin-left: -125px;
+    margin-top: -100px;
+    background: #ffffff;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffffff;
+    border-radius: 5px;
+}
+
+.reportGenPopup_status
+{
+    text-align: center;
+    margin-top: 85px;
+    font-size: 125%;
+}
+
+@media print
+{
+    body, div, section, iframe, audio, body *
+    {
+        all: revert !important;
+        background-color: #ffffff !important;
+        visibility: hidden;
+    }
+
+    .reportGenPopup
+    {
+        visibility: hidden;
+    }
+
+    .customReport, .customPrintableReport, .customPrintableReport *
+    {
+        visibility: visible;
+    }
+
+    .customReport
+    {
+        page-break-after: always;
+        float:none;
+        display:block;
+    }
+}
